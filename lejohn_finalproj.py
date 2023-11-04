@@ -8,8 +8,8 @@ Original file is located at
 """
 
 import pandas as pd
-cows_2021=pd.read_csv(r"gs://lejohn_finalproj/Ohio Dairy_2021.csv",dtype={'State ANSI':object,'County ANSI':object})
-cows_2022=pd.read_csv(r"gs://lejohn_finalproj/Ohio_Dairy_2022.csv",dtype={'State ANSI':object,'County ANSI':object})
+cows_2021=pd.read_csv("gs://lejohn_finalproj/Ohio Dairy_2021.csv",dtype={'State ANSI':object,'County ANSI':object})
+cows_2022=pd.read_csv("gs://lejohn_finalproj/Ohio_Dairy_2022.csv",dtype={'State ANSI':object,'County ANSI':object})
 
 cows_2021.dropna(subset='CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>',inplace=True)
 cows_2022.dropna(subset='CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>',inplace=True)
