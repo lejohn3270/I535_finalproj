@@ -14,8 +14,8 @@ cows_2023=pd.read_csv("gs://lejohn_finalproj/Ohio_Dairy_2023.csv",dtype={'State 
 cows_2022.dropna(subset='CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>',inplace=True)
 cows_2023.dropna(subset='CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>',inplace=True)
 
-cows_2022.drop(cows_2021.loc[cows_2021['CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>']==' (D)'].index,inplace=True)
-cows_2023.drop(cows_2022.loc[cows_2022['CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>']==' (D)'].index,inplace=True)
+cows_2022.drop(cows_2021.loc[cows_2022['CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>']==' (D)'].index,inplace=True)
+cows_2023.drop(cows_2022.loc[cows_2023['CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>']==' (D)'].index,inplace=True)
 
 cows_2022['CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>'].replace(',','',inplace=True,regex=True)
 cows_2023['CATTLE, COWS, MILK - INVENTORY  -  <b>VALUE</b>'].replace(',','',inplace=True,regex=True)
